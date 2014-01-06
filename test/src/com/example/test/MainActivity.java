@@ -33,18 +33,21 @@ public class MainActivity extends Activity {
 		public boolean onTouch(View v, MotionEvent event) {
 			Button button = (Button) v;
 
-			// On r¨¦cup¨¨re la largeur du bouton
+			//we get the length and width of the button
 			int largeur = button.getWidth();
-			// On r¨¦cup¨¨re la hauteur du bouton
+			
 			int hauteur = button.getHeight();
 
-			// On r¨¦cup¨¨re la coordonn¨¦e sur l'abscisse (X) de l'¨¦v¨¨nement
+			//we get the position of the touch
 			float x = event.getX();
-			// On r¨¦cup¨¨re la coordonn¨¦e sur l'ordonn¨¦e (Y) de l'¨¦v¨¨nement
+			
 			float y = event.getY();
 			
+			//we adjust the size of the text according to the touch
 			button.setTextSize(Math.max(Math.min(Math.abs(x - largeur / 2)
-					+ Math.abs(y - hauteur / 2),70),5)); 
+					+ Math.abs(y - hauteur / 2),70),5));
+			
+			//The touch is over once not wanted
 			return false;
 		}
 	};
