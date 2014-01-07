@@ -20,7 +20,7 @@ public class MainActivity extends Activity {
 	    @Override
 	    public void onClick(View v) {	
 	    	hello = (TextView)findViewById(R.id.hello);
-	    	if(hello.getText()=="Hello world!") {
+	    	if(hello.getText().equals("Hello world!")) {
 	    		hello.setText("Hell, I'm sick of the \"Hello world!\" message!!!");
 	    	}
 	    	else hello.setText("Hello world!");
