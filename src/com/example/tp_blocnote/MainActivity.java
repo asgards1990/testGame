@@ -99,18 +99,16 @@ public class MainActivity extends Activity {
 				animation = new TranslateAnimation(0,0,y[0],y[1]);
 				animation.setDuration(1450);
 				animation.setInterpolator(new BounceInterpolator());
-				animation.setFillAfter(true);
+//				animation.setFillAfter(true);
 				animation.setFillEnabled(true);
-				animation.setFillBefore(false);
 				animation.setAnimationListener(new AnimationListener() {
 
 					@Override
 					public void onAnimationEnd(Animation arg0) {
-						
 						RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams)menu.getLayoutParams();
-				        //params.topMargin += y[1];
-						//params.topMargin = 100;
-	                    //menu.setLayoutParams(params);
+						params.topMargin += y[1]-y[0];
+	                    menu.setLayoutParams(params);
+						
 					}
 
 					@Override
@@ -119,7 +117,7 @@ public class MainActivity extends Activity {
 
 					@Override
 					public void onAnimationStart(Animation arg0) {
-						// TODO Auto-generated method stub
+						
 						
 					}
 					
@@ -135,11 +133,9 @@ public class MainActivity extends Activity {
 		
 		edition.addTextChangedListener(new TextWatcher() {
 			@Override
-			  /**
-			   * s est la chaîne de caractères qui est en train de changer
-			  */
+			 
 			  public void onTextChanged(CharSequence s, int start, int before, int count) {
-			    // Que faire au moment où le texte change ?
+			    
 //				String currentText = edition.getText().toString();
 //				currentText = currentText.substring(0,start);
 				
@@ -147,22 +143,15 @@ public class MainActivity extends Activity {
 			  }
 
 			  @Override
-			  /**
-			   * @param s La chaîne qui a été modifiée
-			   * @param count Le nombre de caractères concernés
-			   * @param start L'endroit où commence la modification dans la chaîne
-			   * @param after La nouvelle taille du texte
-			  */
+			  
 			  public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 			    // Que faire juste avant que le changement de texte soit pris en compte ?
 			  }
 
 			  @Override
-			  /**
-			   * @param s L'endroit où le changement a été effectué
-			  */
+			  
 			  public void afterTextChanged(Editable s) {
-			    // Que faire juste après que le changement de texte a été pris en compte ?				
+		
 			  }
 		});
 		
@@ -190,12 +179,7 @@ public class MainActivity extends Activity {
 		
 		
 //		edition.setOnKeyListener(new View.OnKeyListener() {
-//			  /**
-//			   * Que faire quand on appuie sur une touche ?
-//			   * @param v La vue sur laquelle s'est effectué l'évènement
-//			   * @param keyCode Le code qui correspond à la touche
-//			   * @param event L'évènement en lui-même
-//			  */
+//			  
 //			  public boolean onKey(View v, int keyCode, KeyEvent event) {
 //			    
 //				  return true;
@@ -213,7 +197,7 @@ public class MainActivity extends Activity {
 //			
 //		    retour = getResources().getDrawable(R.drawable.ic_launcher);
 //				
-//		    // On délimite l'image (elle va de son coin en haut à gauche à son coin en bas à droite)
+//	
 //		    retour.setBounds(0, 0, retour.getIntrinsicWidth(), retour.getIntrinsicHeight());
 //		    return retour;
 //		  }
