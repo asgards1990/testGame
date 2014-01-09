@@ -8,159 +8,154 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
-    
+
     <RelativeLayout
-        android:id="@+id/bloc"
+        android:id="@+id/menu"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" >
 
-        <RelativeLayout
-            android:id="@+id/menu"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content" >
-
-            <Button
-                android:id="@+id/gras"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:text="    Gras    " />
-
-            <Button
-                android:id="@+id/italique"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/souligne"
-                android:layout_alignBottom="@+id/souligne"
-                android:layout_centerHorizontal="true"
-                android:layout_marginRight="22dp"
-                android:text=" Italique " />
-
-            <Button
-                android:id="@+id/souligne"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/gras"
-                android:layout_alignBottom="@+id/gras"
-                android:layout_alignParentRight="true"
-                android:text="Souligné" />
-
-            <TextView
-                android:id="@+id/smileys"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/gras"
-                android:layout_below="@+id/gras"
-                android:layout_marginBottom="3dp"
-                android:layout_marginTop="8dp"
-                android:text="Smileys:" />
-
-            <RadioGroup
-                android:id="@+id/couleurs"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/smileys"
-                android:layout_below="@+id/smileys"
-                android:orientation="horizontal" >
-
-                <RadioButton
-                    android:id="@+id/noir"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checked="true"
-                    android:text="Noir" />
-
-                <RadioButton
-                    android:id="@+id/bleu"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Bleu" />
-
-                <RadioButton
-                    android:id="@+id/rouge"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Rouge" />
-            </RadioGroup>
-
-            <ImageView
-                android:id="@+id/smiley2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/smileys"
-                android:layout_centerHorizontal="true"
-                android:src="@drawable/smiley2" />
-
-            <ImageView
-                android:id="@+id/smiley1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/smileys"
-                android:layout_toRightOf="@+id/smileys"
-                android:src="@drawable/smiley1" />
-
-            <ImageView
-                android:id="@+id/smiley3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/couleurs"
-                android:layout_alignTop="@+id/smileys"
-                android:layout_marginLeft="20dp"
-                android:layout_toRightOf="@+id/couleurs"
-                android:src="@drawable/smiley3" />
-        </RelativeLayout>
+        <Button
+            android:id="@+id/gras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="    Gras    " />
 
         <Button
-            android:id="@+id/cacherAfficher"
+            android:id="@+id/italique"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/menu"
+            android:layout_alignBaseline="@+id/souligne"
+            android:layout_alignBottom="@+id/souligne"
             android:layout_centerHorizontal="true"
-            android:text="Cacher" />
+            android:layout_marginRight="22dp"
+            android:text=" Italique " />
+
+        <Button
+            android:id="@+id/souligne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/gras"
+            android:layout_alignBottom="@+id/gras"
+            android:layout_alignParentRight="true"
+            android:text="Souligné" />
 
         <TextView
-            android:id="@+id/editionTextView"
+            android:id="@+id/smileys"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/cacherAfficher"
-            android:layout_marginTop="21dp"
-            android:text="Edition: " />
+            android:layout_alignLeft="@+id/gras"
+            android:layout_below="@+id/gras"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="8dp"
+            android:text="Smileys:" />
 
-        <EditText
-            android:id="@+id/edition"
+        <RadioGroup
+            android:id="@+id/couleurs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/cacherAfficher"
-            android:layout_alignTop="@+id/editionTextView"
-            android:ems="10"
-            android:inputType="textMultiLine" >
+            android:layout_alignLeft="@+id/smileys"
+            android:layout_below="@+id/smiley1"
+            android:orientation="horizontal" >
 
-            <requestFocus />
-        </EditText>
+            <RadioButton
+                android:id="@+id/noir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Noir" />
 
-        <TextView
-            android:id="@+id/previsualisationTextView"
+            <RadioButton
+                android:id="@+id/bleu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bleu" />
+
+            <RadioButton
+                android:id="@+id/rouge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rouge" />
+        </RadioGroup>
+
+        <ImageButton
+            android:id="@+id/smiley2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/edition"
-            android:layout_marginTop="18dp"
-            android:text="Prévisualisation: " />
+            android:layout_alignTop="@+id/smiley1"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/smiley2" />
 
-        <TextView
-            android:id="@+id/previsualisation"
+        <ImageButton
+            android:id="@+id/smiley1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/previsualisationTextView"
-            android:layout_alignBottom="@+id/previsualisationTextView"
-            android:layout_alignLeft="@+id/edition" />
+            android:layout_below="@+id/gras"
+            android:layout_toRightOf="@+id/smileys"
+            android:src="@drawable/smiley1" />
 
-        <View
-            android:id="@+id/line"
-            android:layout_width="fill_parent"
-            android:layout_height="1dip"
-            android:layout_below="@+id/cacherAfficher"
-            android:background="#FF0000FF" />
+        <ImageButton
+            android:id="@+id/smiley3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/couleurs"
+            android:layout_alignLeft="@+id/souligne"
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/smiley3" />
+
     </RelativeLayout>
+
+    <Button
+        android:id="@+id/cacherAfficher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/menu"
+        android:layout_centerHorizontal="true"
+        android:text="Cacher" />
+
+    <TextView
+        android:id="@+id/editionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cacherAfficher"
+        android:layout_marginTop="21dp"
+        android:text="Edition: " />
+
+    <EditText
+        android:id="@+id/edition"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cacherAfficher"
+        android:layout_alignTop="@+id/editionTextView"
+        android:lines="5"
+       	android:textSize="8sp"
+        android:inputType="textMultiLine" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/previsualisationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edition"
+        android:layout_marginTop="18dp"
+        android:text="Prévisualisation: " />
+
+    <TextView
+        android:id="@+id/previsualisation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/previsualisationTextView"
+        android:layout_alignBottom="@+id/previsualisationTextView"
+        android:layout_alignLeft="@+id/edition" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_below="@+id/cacherAfficher"
+        android:background="#FF0000FF" />
 
 </RelativeLayout>
