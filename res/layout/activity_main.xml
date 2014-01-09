@@ -20,6 +20,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
+            android:paddingBottom="5dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:paddingTop="5dp"
             android:text="    Gras    " />
 
         <Button
@@ -30,6 +34,10 @@
             android:layout_alignBottom="@+id/souligne"
             android:layout_centerHorizontal="true"
             android:layout_marginRight="22dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:paddingTop="5dp"
             android:text=" Italique " />
 
         <Button
@@ -39,6 +47,10 @@
             android:layout_alignBaseline="@+id/gras"
             android:layout_alignBottom="@+id/gras"
             android:layout_alignParentRight="true"
+            android:paddingBottom="5dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:paddingTop="5dp"
             android:text="Souligné" />
 
         <TextView
@@ -48,7 +60,7 @@
             android:layout_alignLeft="@+id/gras"
             android:layout_below="@+id/gras"
             android:layout_marginBottom="3dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="15dp"
             android:text="Smileys:" />
 
         <RadioGroup
@@ -92,6 +104,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/gras"
+            android:layout_marginTop="5dp"
             android:layout_toRightOf="@+id/smileys"
             android:src="@drawable/smiley1" />
 
@@ -101,7 +114,7 @@
             android:layout_height="wrap_content"
             android:layout_above="@+id/couleurs"
             android:layout_alignLeft="@+id/souligne"
-            android:layout_marginLeft="25dp"
+            android:layout_marginLeft="18dp"
             android:src="@drawable/smiley3" />
 
     </RelativeLayout>

@@ -5,10 +5,8 @@ import android.text.Editable;
 import android.text.Html;
 import android.text.Html.ImageGetter;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.view.KeyEvent;
-import android.view.ViewGroup;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
@@ -17,9 +15,7 @@ import android.view.animation.LayoutAnimationController;
 import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.FrameLayout;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.RelativeLayout;
@@ -94,7 +90,7 @@ public class MainActivity extends Activity {
 	private String currentColor = noir;
 	
 	private SmileyGetter getter = null;
-
+	
 	boolean isOpen = true;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -109,6 +105,8 @@ public class MainActivity extends Activity {
 		smiley1 =(ImageButton)findViewById(R.id.smiley1);
 		smiley2 =(ImageButton)findViewById(R.id.smiley2);
 		smiley3 =(ImageButton)findViewById(R.id.smiley3);
+		
+		getter = new SmileyGetter(this);
 		
 		couleurs = (RadioGroup)findViewById(R.id.couleurs);
 		
@@ -146,22 +144,16 @@ public class MainActivity extends Activity {
 	    italique.setOnClickListener(new View.OnClickListener() {
 	      @Override
 	      public void onClick(View vue) {
-	        // On récupère la position du début de la sélection
 	        int selectionStart = edition.getSelectionStart();
-	        // On récupère la position de la fin de la sélection
 	        int selectionEnd = edition.getSelectionEnd();
 
 	        Editable editable = edition.getText();
 
-	        // Si les deux positions sont identiques (pas de sélection de plusieurs caractères)
 	        if(selectionStart == selectionEnd)
-	          //On insère les balises ouvrante et fermante avec rien dedans
 	          editable.insert(selectionStart, "<i></i>");
 	        else
 	        {
-	          // On met la balise avant la sélection
 	          editable.insert(selectionStart, "<i>");
-	          // On rajoute la balise après la sélection (et après les 3 caractères de la balise <b>)
 	          editable.insert(selectionEnd + 3, "</i>");
 	        }
 	      }
@@ -170,22 +162,16 @@ public class MainActivity extends Activity {
 	     souligne.setOnClickListener(new View.OnClickListener() {
 	      @Override
 	      public void onClick(View vue) {
-	        // On récupère la position du début de la sélection
 	        int selectionStart = edition.getSelectionStart();
-	        // On récupère la position de la fin de la sélection
 	        int selectionEnd = edition.getSelectionEnd();
 
 	        Editable editable = edition.getText();
-	        
-	        // Si les deux positions sont identiques (pas de sélection de plusieurs caractères)
+
 	        if(selectionStart == selectionEnd)
-	          // On insère les balises ouvrante et fermante avec rien dedans
 	          editable.insert(selectionStart, "<u></u>");
 	        else
 	        {
-	          // On met la balise avant la sélection
 	          editable.insert(selectionStart, "<u>");
-	          // On rajoute la balise après la sélection (et après les 3 caractères de la balise <b>)
 	          editable.insert(selectionEnd + 3, "</u>");
 	        }
 	      }
@@ -231,8 +217,6 @@ public class MainActivity extends Activity {
 	
 				}
 				else {
-//					y[0] = -menu.getHeight();
-//					y[1] = 0;
 					y[0] = 0;
 					y[1] = menu.getHeight();
 					temp.setText("Cacher");
@@ -243,7 +227,6 @@ public class MainActivity extends Activity {
 //				animation = new TranslateAnimation(0,0,0,0);
 				animation.setDuration(1450);
 				animation.setInterpolator(new BounceInterpolator());
-//				animation.setFillAfter(true);
 				animation.setFillEnabled(true);
 				animation.setFillBefore(false);
 				animation.setAnimationListener(new AnimationListener() {
@@ -263,9 +246,7 @@ public class MainActivity extends Activity {
 					public void onAnimationStart(Animation arg0) {
 						int[] temp = new int[2];
 						cacherAfficher.getLocationOnScreen(temp);
-						
-					}
-					
+					}					
 				});
 
 
@@ -288,13 +269,11 @@ public class MainActivity extends Activity {
 			  @Override
 			  
 			  public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-			    // Que faire juste avant que le changement de texte soit pris en compte ?
 			  }
 
 			  @Override
 			  
 			  public void afterTextChanged(Editable s) {
-		
 			  }
 		});
 		
@@ -315,15 +294,13 @@ public class MainActivity extends Activity {
                 	currentColor = rouge;
                     break;
                 }
-            	edition.setText(edition.getText().toString());
-            	
+            	edition.setText(edition.getText().toString());           	
             }
         });
 
 		edition.setOnKeyListener(new View.OnKeyListener() {
 		      @Override
 		      public boolean onKey(View v, int keyCode, KeyEvent event) {
-		        // On récupère la position du début de la sélection dans le texte
 		        int cursorIndex = edition.getSelectionStart();
 		        // Ne réagir qu'à l'appui sur une touche (et pas au relâchement)
 		        if(event.getAction() == 0)
