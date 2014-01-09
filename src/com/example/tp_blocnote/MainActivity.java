@@ -1,6 +1,5 @@
 package com.example.tp_blocnote;
 
-
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.Html.ImageGetter;
@@ -47,6 +46,7 @@ public class MainActivity extends Activity {
 
 	
 	RelativeLayout menu = null;
+	RelativeLayout bloc = null;
 	RelativeLayout main = null;
 	
 	private String noir = "#000000";
@@ -74,6 +74,7 @@ public class MainActivity extends Activity {
 		couleurs.getLocationInWindow(tailleDuMenu);
 		
 		menu = (RelativeLayout)findViewById(R.id.menu);
+		bloc = (RelativeLayout)findViewById(R.id.bloc);
 		main = (RelativeLayout)findViewById(R.id.main);
 		
 		
@@ -89,26 +90,31 @@ public class MainActivity extends Activity {
 					y[0] = 0;
 					y[1] = -menu.getHeight();					
 					temp.setText("Afficher");
+	
 				}
 				else {
-					y[0] = -menu.getHeight();
-					y[1] = 0;
+//					y[0] = -menu.getHeight();
+//					y[1] = 0;
+					y[0] = 0;
+					y[1] = menu.getHeight();
 					temp.setText("Cacher");
+					
 				}
 				
 				animation = new TranslateAnimation(0,0,y[0],y[1]);
+//				animation = new TranslateAnimation(0,0,0,0);
 				animation.setDuration(1450);
 				animation.setInterpolator(new BounceInterpolator());
 //				animation.setFillAfter(true);
 				animation.setFillEnabled(true);
+				animation.setFillBefore(false);
 				animation.setAnimationListener(new AnimationListener() {
 
 					@Override
 					public void onAnimationEnd(Animation arg0) {
 						RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams)menu.getLayoutParams();
-						params.topMargin += y[1]-y[0];
-	                    menu.setLayoutParams(params);
-						
+						params.topMargin += y[1];
+	                    menu.setLayoutParams(params);				
 					}
 
 					@Override
@@ -117,6 +123,12 @@ public class MainActivity extends Activity {
 
 					@Override
 					public void onAnimationStart(Animation arg0) {
+						int[] temp = new int[2];
+						cacherAfficher.getLocationOnScreen(temp);
+						Toast.makeText(MainActivity.this,
+								String.valueOf(temp[1]), Toast.LENGTH_SHORT)
+								.show();
+						
 						
 						
 					}
