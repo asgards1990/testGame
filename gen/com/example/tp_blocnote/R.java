@@ -25,7 +25,6 @@ public final class R {
         public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
-<<<<<<< HEAD
         public static final int button=0x7f020000;
         public static final int button_bleu=0x7f020001;
         public static final int button_green=0x7f020002;
@@ -58,36 +57,6 @@ public final class R {
         public static final int smiley3=0x7f09000c;
         public static final int smileys=0x7f090006;
         public static final int souligne=0x7f090005;
-=======
-        public static final int button_bleu=0x7f020000;
-        public static final int button_green=0x7f020001;
-        public static final int ic_launcher=0x7f020002;
-        public static final int smiley1=0x7f020003;
-        public static final int smiley2=0x7f020004;
-        public static final int smiley3=0x7f020005;
-    }
-    public static final class id {
-        public static final int action_settings=0x7f090013;
-        public static final int bleu=0x7f090009;
-        public static final int cacherAfficher=0x7f09000d;
-        public static final int couleurs=0x7f090006;
-        public static final int edition=0x7f09000f;
-        public static final int editionTextView=0x7f09000e;
-        public static final int gras=0x7f090002;
-        public static final int italique=0x7f090003;
-        public static final int line=0x7f090012;
-        public static final int main=0x7f090000;
-        public static final int menu=0x7f090001;
-        public static final int noir=0x7f090008;
-        public static final int previsualisation=0x7f090011;
-        public static final int previsualisationTextView=0x7f090010;
-        public static final int rouge=0x7f09000a;
-        public static final int smiley1=0x7f090007;
-        public static final int smiley2=0x7f09000b;
-        public static final int smiley3=0x7f09000c;
-        public static final int smileys=0x7f090005;
-        public static final int souligne=0x7f090004;
->>>>>>> d2d7312becb6e8b6d2081b607e1c46972dbfb954
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
