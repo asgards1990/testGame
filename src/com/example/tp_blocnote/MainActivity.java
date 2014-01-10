@@ -7,6 +7,10 @@ import android.text.Html.ImageGetter;
 import android.text.TextWatcher;
 import android.view.View;
 import android.view.KeyEvent;
+<<<<<<< HEAD
+=======
+import android.view.animation.AccelerateInterpolator;
+>>>>>>> d2d7312becb6e8b6d2081b607e1c46972dbfb954
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.BounceInterpolator;
@@ -23,6 +27,10 @@ import android.widget.Toast;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
+<<<<<<< HEAD
+=======
+import android.graphics.Color;
+>>>>>>> d2d7312becb6e8b6d2081b607e1c46972dbfb954
 import android.graphics.drawable.Drawable;
 
 
@@ -114,7 +122,10 @@ public class MainActivity extends Activity {
 		
 		menu = (RelativeLayout)findViewById(R.id.menu);
 		main = (RelativeLayout)findViewById(R.id.main);
+<<<<<<< HEAD
 		bloc = (RelativeLayout)findViewById(R.id.bloc);
+=======
+>>>>>>> d2d7312becb6e8b6d2081b607e1c46972dbfb954
 		
 	    gras.setOnClickListener(new View.OnClickListener() {
 	      @Override
@@ -232,9 +243,15 @@ public class MainActivity extends Activity {
 
 					@Override
 					public void onAnimationEnd(Animation arg0) {
+<<<<<<< HEAD
 						RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams)bloc.getLayoutParams();
 						params.topMargin += y[1];
 	                    bloc.setLayoutParams(params);				
+=======
+						RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams)menu.getLayoutParams();
+						params.topMargin += y[1];
+	                    menu.setLayoutParams(params);				
+>>>>>>> d2d7312becb6e8b6d2081b607e1c46972dbfb954
 					}
 
 					@Override
@@ -265,11 +282,21 @@ public class MainActivity extends Activity {
 
 			  }
 
+<<<<<<< HEAD
 			  @Override	  
 			  public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 			  }
 
 			  @Override  
+=======
+			  @Override
+			  
+			  public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+			  }
+
+			  @Override
+			  
+>>>>>>> d2d7312becb6e8b6d2081b607e1c46972dbfb954
 			  public void afterTextChanged(Editable s) {
 			  }
 		});
