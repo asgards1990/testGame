@@ -34,7 +34,7 @@ public final class R {
     }
     public static final class id {
         public static final int action_settings=0x7f090013;
-        public static final int bleu=0x7f090008;
+        public static final int bleu=0x7f090009;
         public static final int cacherAfficher=0x7f09000d;
         public static final int couleurs=0x7f090006;
         public static final int edition=0x7f09000f;
@@ -44,12 +44,12 @@ public final class R {
         public static final int line=0x7f090012;
         public static final int main=0x7f090000;
         public static final int menu=0x7f090001;
-        public static final int noir=0x7f090007;
+        public static final int noir=0x7f090008;
         public static final int previsualisation=0x7f090011;
         public static final int previsualisationTextView=0x7f090010;
-        public static final int rouge=0x7f090009;
-        public static final int smiley1=0x7f09000b;
-        public static final int smiley2=0x7f09000a;
+        public static final int rouge=0x7f09000a;
+        public static final int smiley1=0x7f090007;
+        public static final int smiley2=0x7f09000b;
         public static final int smiley3=0x7f09000c;
         public static final int smileys=0x7f090005;
         public static final int souligne=0x7f090004;
