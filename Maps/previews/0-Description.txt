@@ -1,0 +1,26 @@
+MAPPEMONDE
+				         chambre_eau
+				              ||
+				              ||
+                     Sommet			              ||
+	_montagne		       Grotte_eau
+	        ||			              ||
+	        ||			              ||
+	        ||			              ||
+ 	     Foret			          village_eau
+	        ||			              ||		  	     
+	        ||			              ||		  	     
+	        ||			              ||			     
+	   village1 ====vers village2 ==== village 2 ========= base_techno
+				              ||		  	     ||
+				              ||		  	     ||
+				              ||		  	     ||
+				         village_feu		cachot
+				              ||		  	     ||
+				              ||		  	     ||
+				              ||		  	     ||
+				         grotte_feu	          chambre_cachot
+				              ||		  	     ||
+				              ||		  	     ||
+				              ||		  	     ||
+				         chambre_feu	             salle_boss
