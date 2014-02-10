@@ -8,9 +8,69 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".GameActivity" >
 
-    <TextView
+    <Button
+        android:id="@+id/right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_above="@+id/down"
+        android:layout_centerHorizontal="true"
+        android:text="@string/right" />
+
+    <Button
+        android:id="@+id/character"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/inventory"
+        android:layout_below="@+id/achievement"
+        android:text="@string/character" />
+
+    <Button
+        android:id="@+id/left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/character"
+        android:layout_marginTop="112dp"
+        android:text="@string/left" />
+
+    <Button
+        android:id="@+id/up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/right"
+        android:layout_toRightOf="@+id/left"
+        android:text="@string/up" />
+
+    <Button
+        android:id="@+id/down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/up"
+        android:layout_below="@+id/left"
+        android:text="@string/down" />
+
+    <Button
+        android:id="@+id/configuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/character"
+        android:layout_toLeftOf="@+id/character"
+        android:text="@string/configuration" />
+
+    <Button
+        android:id="@+id/inventory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/configuration"
+        android:layout_marginLeft="28dp"
+        android:layout_toRightOf="@+id/up"
+        android:text="@string/inventory" />
+
+    <Button
+        android:id="@+id/achievement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="36dp"
+        android:text="@string/achievement" />
 
 </RelativeLayout>

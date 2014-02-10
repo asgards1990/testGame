@@ -22,6 +22,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.testgame.AchievementActivity"
+            android:label="@string/title_activity_achievement" >
+        </activity>
+        <activity
+            android:name="com.example.testgame.InventoryActivity"
+            android:label="@string/title_activity_inventory" >
+        </activity>
+        <activity
+            android:name="com.example.testgame.CharacterActivity"
+            android:label="@string/title_activity_character" >
+        </activity>
+        <activity
+            android:name="com.example.testgame.ConfigurationActivity"
+            android:label="@string/title_activity_configuration" >
+        </activity>
     </application>
 
 </manifest>
