@@ -21,5 +21,6 @@
     <string name="save">Save</string>
     <string name="load">Load</string>
     <string name="resume">Resume</string>
+    <string name="title_activity_save">SaveActivity</string>
 
 </resources>

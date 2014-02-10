@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.Toast;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.PopupWindow;
 
@@ -59,15 +60,47 @@ public class GameActivity extends Activity {
 						R.layout.popup_configuration, null);
 				final PopupWindow popupWindow = new PopupWindow(popupView,
 						LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-				Button buttonDismiss = (Button) popupView
-						.findViewById(R.id.exit);
-				buttonDismiss.setOnClickListener(new Button.OnClickListener() {
+				
+			
+				
+				Button buttonSave = (Button) popupView
+						.findViewById(R.id.save);
+				buttonSave.setOnClickListener(new Button.OnClickListener() {
 					@Override
 					public void onClick(View v) {
-						// TODO Auto-generated method stub
+						// save the game first
+						Intent intent = new Intent(GameActivity.this,
+								SaveActivity.class);
+						startActivity(intent);
 						popupWindow.dismiss();
 					}
 				});
+				
+				Button buttonLoad = (Button) popupView
+						.findViewById(R.id.load);
+				buttonLoad.setOnClickListener(new OnClickListener() {
+					@Override
+					public void onClick(View v) {
+						// load game first
+						Toast.makeText(GameActivity.this,
+								"Game successifuly loaded!",
+								Toast.LENGTH_SHORT).show();
+						popupWindow.dismiss();
+					}
+				});
+				
+				Button buttonExit = (Button) popupView
+						.findViewById(R.id.exit);
+				buttonExit.setOnClickListener(new OnClickListener() {
+					@Override
+					public void onClick(View v) {
+						Toast.makeText(GameActivity.this,
+								"Back to black",
+								Toast.LENGTH_SHORT).show();
+						popupWindow.dismiss();
+					}
+				});
+				
 			popupWindow.showAtLocation(configButton, Gravity.CENTER , 0, 0);
 			}
 		});

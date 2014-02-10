@@ -38,6 +38,10 @@
             android:name="com.example.testgame.ConfigurationActivity"
             android:label="@string/title_activity_configuration" >
         </activity>
+        <activity
+            android:name="com.example.testgame.SaveActivity"
+            android:label="@string/title_activity_save" >
+        </activity>
     </application>
 
 </manifest>
