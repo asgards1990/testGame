@@ -49,6 +49,16 @@ public class GameActivity extends Activity {
 				startActivity(intent);
 			}
 		});
+		
+		final Button battleButton = (Button) findViewById(R.id.battle);
+		battleButton.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(GameActivity.this,
+						BattleActivity.class);
+				startActivity(intent);
+			}
+		});
 
 		final Button configButton = (Button) findViewById(R.id.configuration);
 		configButton.setOnClickListener(new OnClickListener() {
@@ -59,9 +69,8 @@ public class GameActivity extends Activity {
 				View popupView = layoutInflater.inflate(
 						R.layout.popup_configuration, null);
 				final PopupWindow popupWindow = new PopupWindow(popupView,
-						LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+						LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);	
 				
-			
 				
 				Button buttonSave = (Button) popupView
 						.findViewById(R.id.save);
@@ -96,6 +105,18 @@ public class GameActivity extends Activity {
 					public void onClick(View v) {
 						Toast.makeText(GameActivity.this,
 								"Back to black",
+								Toast.LENGTH_SHORT).show();
+						finish();
+					}
+				});
+				
+				Button buttonResume = (Button) popupView
+						.findViewById(R.id.resume);
+				buttonResume.setOnClickListener(new OnClickListener() {
+					@Override
+					public void onClick(View v) {
+						Toast.makeText(GameActivity.this,
+								"Yes baby, just keep playing",
 								Toast.LENGTH_SHORT).show();
 						popupWindow.dismiss();
 					}

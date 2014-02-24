@@ -22,5 +22,10 @@
     <string name="load">Load</string>
     <string name="resume">Resume</string>
     <string name="title_activity_save">SaveActivity</string>
+    <string name="title_activity_menu">MenuActivity</string>
+    <string name="title_activity_battle">BattleActivity</string>
+    <string name="title_activity_credit">CreditActivity</string>
+    <string name="title_activity_load">LoadActivity</string>
+    <string name="credit">Credit</string>
 
 </resources>

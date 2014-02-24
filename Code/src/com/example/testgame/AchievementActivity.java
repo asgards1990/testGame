@@ -15,7 +15,7 @@ public class AchievementActivity extends Activity {
 		setContentView(R.layout.activity_achievement);
 		
 			
-			final Button closeButton = (Button) findViewById(R.id.close);
+			final Button closeButton = (Button) findViewById(R.id.closeBattle);
 			closeButton.setOnClickListener(new OnClickListener() {
 				@Override
 				public void onClick(View v) {

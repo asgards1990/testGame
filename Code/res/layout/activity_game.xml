@@ -49,28 +49,37 @@
         android:text="@string/down" />
 
     <Button
-        android:id="@+id/configuration"
+        android:id="@+id/achievement"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/character"
-        android:layout_toLeftOf="@+id/character"
-        android:text="@string/configuration" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="76dp"
+        android:text="@string/achievement" />
 
     <Button
         android:id="@+id/inventory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/configuration"
-        android:layout_marginLeft="28dp"
-        android:layout_toRightOf="@+id/up"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
         android:text="@string/inventory" />
 
     <Button
-        android:id="@+id/achievement"
+        android:id="@+id/configuration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="36dp"
-        android:text="@string/achievement" />
+        android:layout_below="@+id/inventory"
+        android:layout_toLeftOf="@+id/inventory"
+        android:text="@string/configuration" />
+
+    <Button
+        android:id="@+id/battle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/right"
+        android:layout_below="@+id/character"
+        android:text="Battle" />
 
 </RelativeLayout>

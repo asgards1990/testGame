@@ -15,7 +15,7 @@ public class CharacterActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_character);
 		
-		final Button closeButton = (Button) findViewById(R.id.close);
+		final Button closeButton = (Button) findViewById(R.id.closeBattle);
 		closeButton.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {

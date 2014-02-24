@@ -15,7 +15,7 @@ public class InventoryActivity extends Activity {
 		setContentView(R.layout.activity_inventory);
 
 			
-			final Button closeButton = (Button) findViewById(R.id.close);
+			final Button closeButton = (Button) findViewById(R.id.closeInventory);
 			closeButton.setOnClickListener(new OnClickListener() {
 				@Override
 				public void onClick(View v) {
