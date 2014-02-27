@@ -9,7 +9,7 @@
     tools:context=".CharacterActivity" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/test"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hello_world" />
@@ -18,8 +18,8 @@
         android:id="@+id/closeBattle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1"
+        android:layout_alignLeft="@+id/test"
+        android:layout_below="@+id/test"
         android:layout_marginTop="98dp"
         android:text="@string/close" />
 

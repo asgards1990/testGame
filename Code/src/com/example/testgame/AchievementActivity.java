@@ -2,6 +2,7 @@ package com.example.testgame;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -19,6 +20,9 @@ public class AchievementActivity extends Activity {
 			closeButton.setOnClickListener(new OnClickListener() {
 				@Override
 				public void onClick(View v) {
+					Intent intent = new Intent(AchievementActivity.this,
+							GameActivity.class);
+					GameActivity.text.setText("just for test");
 					finish();		
 				}
 			});

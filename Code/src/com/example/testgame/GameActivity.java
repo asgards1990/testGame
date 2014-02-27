@@ -1,5 +1,7 @@
 package com.example.testgame;
 
+import testgame.classes.Character.Character;
+import testgame.classes.Character.Monster;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -9,16 +11,29 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.PopupWindow;
 
 public class GameActivity extends Activity {
+	
+	public static Character me = new Character("Su YANG");
+	public static Character you = new Character("corpus-delicti",10, 42, 69,97, 55, 11, 99, 50,null,null);
+	public static Monster monster1 = new Monster("SY",10, 42, 69,97, 55, 11, 99, 50,null,null,88,77,"I like SWTOR",null);
+	public static Monster monster2 = new Monster();
+	public static TextView text =  null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_game);
+		
+		text = (TextView) findViewById(R.id.test);
+		
+		text.setText(text.getText()+ monster2.getDialogues().get(0));
+		//text.setText(text.getText()+" My name is "+ me.getName()+". You name is: "+you.getName()+". Oh look, here is "+
+			//	monster1.getName()+" and "+monster2.getName()+" !");
 
 		final Button achievementButton = (Button) findViewById(R.id.achievement);
 		achievementButton.setOnClickListener(new OnClickListener() {

@@ -9,7 +9,7 @@
     tools:context=".BattleActivity" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/test"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hello_world" />
@@ -18,10 +18,10 @@
         android:id="@+id/closeBattle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
+        android:layout_below="@+id/test"
         android:layout_marginLeft="48dp"
         android:layout_marginTop="84dp"
-        android:layout_toRightOf="@+id/textView1"
+        android:layout_toRightOf="@+id/test"
         android:text="Close" />
 
 </RelativeLayout>

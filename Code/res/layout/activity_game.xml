@@ -82,4 +82,12 @@
         android:layout_below="@+id/character"
         android:text="Battle" />
 
+    <TextView
+        android:id="@+id/test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/right"
+        android:layout_toRightOf="@+id/character"
+        android:text="for test;" />
+
 </RelativeLayout>
