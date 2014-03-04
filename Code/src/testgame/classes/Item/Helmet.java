@@ -9,7 +9,7 @@ public class Helmet extends Item{
 	private float chance;
 	
 
-	public float getIndexShield() {
+	public int getIndexShield() {
 		return indexShield;
 	}
 	public int getEndurance() {

@@ -2,7 +2,7 @@ package testgame.classes.Item;
 
 public class Greaves extends Item{
 	
-	private float indexShield;
+	private int indexShield;
 	private int endurance;
 	private int HP;
 	private int MP;
@@ -10,7 +10,7 @@ public class Greaves extends Item{
 	private float damageReturn;
 	
 
-	public float getIndexShield() {
+	public int getIndexShield() {
 		return indexShield;
 	}
 	public int getEndurance() {
@@ -28,7 +28,7 @@ public class Greaves extends Item{
 	}
 	
 	public Greaves(String name, String description, int levelRequirement
-			, float indexShield, int endurance,  int HP, int MP, float chance, 
+			, int indexShield, int endurance,  int HP, int MP, float chance, 
 			float damageReturn) {
 		super(name, description, levelRequirement);
 		this.indexShield=indexShield;

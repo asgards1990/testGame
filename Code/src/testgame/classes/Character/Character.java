@@ -3,7 +3,7 @@ package testgame.classes.Character;
 import java.util.ArrayList;
 
 import testgame.classes.Spell.Spell;
-import testgame.classes.State.State;
+import testgame.classes.StateCombat.StateCombat;
 
 public class Character {
 	
@@ -17,7 +17,9 @@ public class Character {
 	protected  float chance;
 	protected  int velocity;
 	protected ArrayList<Spell> listOfSpells;
-	protected ArrayList<State> listOfStates;
+	protected ArrayList<StateCombat> listOfStates;
+	protected int HPCombat;
+	protected int MPCombat;
 
 
 	public String getName() {
@@ -44,8 +46,14 @@ public class Character {
 	public float getChance() {
 		return chance;
 	}
-	public float getVelocity() {
+	public int getVelocity() {
 		return velocity;
+	}
+	public int getHPCombat() {
+		return HPCombat;
+	}
+	public int getMPCombat() {
+		return MPCombat;
 	}
 	
 	public Character(){
@@ -76,7 +84,7 @@ public class Character {
 	}
 	
 	public Character(String name, int level, int HP, int MP, int power, int endurance, int indexShield, float chance, int velocity, ArrayList<Spell>
-			listOfSpells,ArrayList<State> listOfStates) {
+			listOfSpells,ArrayList<StateCombat> listOfStates) {
 		this.name=name;
 		this.level=level;
 		this.HP=HP;
@@ -88,7 +96,18 @@ public class Character {
 		this.velocity=velocity;
 		this.listOfSpells=listOfSpells;
 		this.listOfStates=listOfStates;
+		this.HPCombat=HP;
+		this.MPCombat=MP;
 	}
+	
+	public void deleteStateCombat(StateCombat state) {
+		listOfStates.remove(state);	
+	}
+	
+	public void setHPCombat(int i) {
+		this.HPCombat=i;
+	}
+	
 
 
 }
